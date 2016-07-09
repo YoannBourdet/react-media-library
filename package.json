@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/YoannBourdet/react-media-library/issues"
   },
-  "homepage": "https://github.com/YoannBourdet/react-media-library#readme"
+  "homepage": "https://github.com/YoannBourdet/react-media-library#readme",
+  "dependencies": {
+    "react": "^15.2.1",
+    "redux": "^3.5.2"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "webpack": "^1.13.1"
+  }
 }
