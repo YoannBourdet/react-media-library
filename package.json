@@ -1,9 +1,11 @@
 {
   "name": "react-media-library",
   "version": "1.0.0",
-  "description": "",
+  "description": "Media libray with react, redux, boostrap",
   "main": "server.js",
   "scripts": {
+    "start": "webpack-dev-server --progress --colors --hot",
+    "build": "webpack --progress --colors --display-error-details",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,10 +20,26 @@
   "homepage": "https://github.com/YoannBourdet/react-media-library#readme",
   "dependencies": {
     "react": "^15.2.1",
+    "react-bootstrap": "^0.29.5",
+    "react-dom": "^15.2.1",
+    "react-redux": "^4.4.5",
     "redux": "^3.5.2"
   },
   "devDependencies": {
-    "babel": "^6.5.2",
-    "webpack": "^1.13.1"
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.10.4",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.9.0",
+    "eslint": "^3.0.1",
+    "eslint-plugin-react": "^5.2.2",
+    "path": "^0.12.7",
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   }
 }
