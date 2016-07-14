@@ -24,7 +24,9 @@ module.exports = {
     }],
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.scss'],
-    alias: {},
+    extensions: ['', '.js', '.jsx', '.css', '.scss'],
+    alias: {
+      bootstrap: '~bootstrap-sass/assets/stylesheets/bootstrap',
+    },
   },
 };
