@@ -1,11 +1,11 @@
 /* eslint quote-props: 0 */
-import path from 'path';
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   context: path.join(__dirname, 'app'),
   entry: [
-    'webpack-dev-server/client?http://localhost:8080/',
-    'webpack/hot/dev-server',
+    'webpack-hot-middleware/client?reload=true',
     './js/main.js',
   ],
   output: {
@@ -23,10 +23,13 @@ module.exports = {
       loaders: ['style', 'css', 'sass'],
     }],
   },
+  plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin(),
+  ],
   resolve: {
     extensions: ['', '.js', '.jsx', '.css', '.scss'],
-    alias: {
-      bootstrap: '~bootstrap-sass/assets/stylesheets/bootstrap',
-    },
+    alias: {},
   },
 };
