@@ -4,7 +4,7 @@
   "description": "Media libray with react, redux, boostrap",
   "main": "server.js",
   "scripts": {
-    "start": "webpack-dev-server --progress --colors --hot",
+    "start": "node server",
     "build": "webpack --progress --colors --display-error-details",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/YoannBourdet/react-media-library#readme",
   "dependencies": {
+    "express": "^4.14.0",
+    "express-react-views": "^0.10.2",
     "react": "^15.2.1",
     "react-bootstrap": "^0.29.5",
     "react-dom": "^15.2.1",
@@ -46,6 +48,8 @@
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.12.1"
   }
 }
