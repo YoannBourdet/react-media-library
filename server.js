@@ -44,6 +44,7 @@ app.get('/', (req, res) => {
   res.render('index', {});
 });
 
+/* eslint no-console: 0  */
 app.listen(globalConfig.port, '0.0.0.0', (err) => {
   if (err) {
     console.log(err);
