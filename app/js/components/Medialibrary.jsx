@@ -1,10 +1,13 @@
 'use strict';
 
 import React, { Component } from 'react';
+import { connect } from '../../utils/';
+
 import { Button, Col, Row } from 'react-bootstrap';
 
 import Modal from './modal';
 
+@connect()
 export default class Medialibrary extends Component {
 
   state = {
@@ -43,6 +46,7 @@ export default class Medialibrary extends Component {
   }
 
   render() {
+    console.log('app props', this.props);
     return(
       <div
         className="layout"

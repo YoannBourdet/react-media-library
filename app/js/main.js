@@ -1,12 +1,22 @@
 'use strict';
-/* styles */
+
+/* Styles */
 import '../scss/main';
-/* App */
+
+/* React */
 import React from 'react';
 import { render } from 'react-dom';
+
+/* Redux */
+import { Provider } from 'react-redux';
+import store from '../store';
+
+/* Main component */
 import Medialibrary from './components/Medialibrary';
 
 render(
-  <Medialibrary />,
+  <Provider store={store}>
+    <Medialibrary />
+  </Provider>,
   document.getElementById('main')
 );
