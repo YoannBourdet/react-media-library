@@ -15,6 +15,10 @@ export default class Medialibrary extends Component {
     showFolderModal: false,
   }
 
+  componentDidMount() {
+    this.props.actions.medias.fetch();
+  }
+
   handleClickMedia() {
     this.setState({ showMediaModal: !this.state.showMediaModal });
   }
@@ -46,7 +50,6 @@ export default class Medialibrary extends Component {
   }
 
   render() {
-    console.log('app props', this.props);
     return(
       <div
         className="layout"
