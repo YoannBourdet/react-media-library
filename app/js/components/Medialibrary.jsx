@@ -5,7 +5,9 @@ import { connect } from '../../utils/';
 
 import { Button, Col, Row } from 'react-bootstrap';
 
-import Modal from './modal';
+import Modal from './Modal';
+import Toolsbar from './Toolsbar';
+import Mosaic from './Mosaic';
 
 @connect()
 export default class Medialibrary extends Component {
@@ -51,30 +53,32 @@ export default class Medialibrary extends Component {
 
   render() {
     return(
-      <div
-        className="layout"
-      >
+      <div className="layout">
         <Row>
-          <Col md={4} xs={6}>
-            <div>
-              <h3>Folders</h3>
+          <Col sm={3}>
+            <div className="layout__left">
+              <h1>Folders</h1>
               <Button
-                bsStyle="primary"
+                bsSize="small"
+                bsStyle="default"
                 onClick={this.handleClickFolder.bind(this)}
               >
-                Primary
+                Add New
               </Button>
             </div>
           </Col>
-          <Col md={8} xs={12}>
-            <div>
-              <h3>Media Library</h3>
+          <Col sm={9}>
+            <div className="layout__right" >
+              <h1>Media Library</h1>
               <Button
-                bsStyle="primary"
+                bsSize="small"
+                bsStyle="default"
                 onClick={this.handleClickMedia.bind(this)}
               >
-                Primary
+                Add New
               </Button>
+              <Toolsbar />
+              <Mosaic />
             </div>
           </Col>
         </Row>

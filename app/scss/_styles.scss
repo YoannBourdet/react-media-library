@@ -3,3 +3,56 @@
    ========================================================================== */
 
 @import 'fonts';
+
+$grey: #e5e5e5;
+
+@mixin borderGrey($position) {
+  @if $position != around {
+    border-#{$position}: 1px solid $grey;
+  }
+  @else {
+    border: 1px solid $grey;
+  }
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+.layout {
+  padding: 0 10px;
+  .layout__left,
+  .layout__right {
+    padding-top: 10px;
+  }
+  .layout__left {
+    @include borderGrey(right);
+  }
+  .layout__right {
+
+  }
+  h1 {
+    display: inline-block;
+    margin: 0 10px 0 0;
+    vertical-align: top;
+    font-size: 23px;
+    font-weight: 400;
+  }
+}
+
+.toolsbar {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: white;
+  @include borderGrey(around);
+}
+
+.mosaic {
+  margin: 20px 0;
+  @include borderGrey(around);
+  .mosaic__item {
+    display: inline-block;
+    background-color: white;
+    @include borderGrey(around);
+  }
+}
