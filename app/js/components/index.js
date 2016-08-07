@@ -1,1 +1,1 @@
-export Medialibrary from './Medialibrary';
+export Medialibrary from './MediaLibrary';

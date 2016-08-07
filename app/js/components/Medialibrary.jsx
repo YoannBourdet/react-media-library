@@ -52,6 +52,8 @@ export default class Medialibrary extends Component {
   }
 
   render() {
+    const { medias } = this.props;
+
     return(
       <div className="layout">
         <Row>
@@ -78,7 +80,7 @@ export default class Medialibrary extends Component {
                 Add New
               </Button>
               <Toolsbar />
-              <Mosaic />
+              <Mosaic items={medias}/>
             </div>
           </Col>
         </Row>

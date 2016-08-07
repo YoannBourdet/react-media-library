@@ -14,3 +14,5 @@ export const mapDispatchToProps = (dispatch) => ({
 });
 
 export const connect = () => reduxConnect(mapStateToProps, mapDispatchToProps);
+
+export * from './array';
