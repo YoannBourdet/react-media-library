@@ -1,3 +1,12 @@
 /* ==========================================================================
    Custom mixins.
    ========================================================================== */
+
+@mixin borderGrey($position) {
+  @if $position != around {
+    border-#{$position}: 1px solid $grey;
+  }
+  @else {
+    border: 1px solid $grey;
+  }
+}

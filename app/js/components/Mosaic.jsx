@@ -5,7 +5,7 @@ import React, { Component, PropTypes } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import ModalEdit from './ModalEdit';
 
-import { partition } from '../../utils/array'
+import { partition } from '../../utils/array';
 
 export default class MLMosaic extends Component {
 
@@ -15,13 +15,12 @@ export default class MLMosaic extends Component {
 
   state = {
     showModalEdit: false,
-    selectedItem: {}
+    selectedItem: {},
   }
 
   handleClickItem(itemId) {
-    console.log('showModalEdit', itemId);
     const { items } = this.props;
-    const selectedItem = items.filter(({id}) => id === itemId).shift();
+    const selectedItem = items.filter(({ id }) => id === itemId).shift();
 
     this.setState({ selectedItem }, () => {
       this.showModalEdit();
@@ -37,9 +36,10 @@ export default class MLMosaic extends Component {
 
     return(
       <ModalEdit
-        item={selectedItem}
         close={this.showModalEdit.bind(this)}
         isOpen={this.state.showModalEdit}
+        item={selectedItem}
+        title="Attachment Details"
       />
     );
   }
@@ -52,7 +52,7 @@ export default class MLMosaic extends Component {
           className="mosaic__row"
           key={idx}
         >
-          {item.map(({ id, sizes: { thumbnail } }, jdx) =>(
+          {item.map(({ id, sizes: { thumbnail } }, jdx) => (
             <Col
               className="mosaic__col"
               key={id}

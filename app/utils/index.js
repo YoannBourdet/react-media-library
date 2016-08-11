@@ -2,6 +2,9 @@
 
 import { bindActionCreators } from 'redux';
 import { connect as reduxConnect } from 'react-redux';
+import jsonpointer from 'jsonpointer';
+
+import locales from '../locales';
 
 import * as mediasAction from '../actions/medias.js';
 
@@ -14,5 +17,7 @@ export const mapDispatchToProps = (dispatch) => ({
 });
 
 export const connect = () => reduxConnect(mapStateToProps, mapDispatchToProps);
+
+export const localize = (path) => jsonpointer.get(locales, path);
 
 export * from './array';

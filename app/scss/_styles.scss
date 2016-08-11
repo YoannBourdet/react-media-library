@@ -2,23 +2,15 @@
    Author's custom styles
    ========================================================================== */
 
+@import 'variables';
 @import 'fonts';
 
-$grey: #e5e5e5;
-
-@mixin borderGrey($position) {
-  @if $position != around {
-    border-#{$position}: 1px solid $grey;
-  }
-  @else {
-    border: 1px solid $grey;
-  }
-}
-
+// Global
 body {
   background-color: #f1f1f1;
 }
 
+// layout
 .layout {
   padding: 0 10px;
   .layout__left,
@@ -40,6 +32,7 @@ body {
   }
 }
 
+// Toolsbar
 .toolsbar {
   margin: 20px 0;
   padding: 10px;
@@ -47,6 +40,7 @@ body {
   @include borderGrey(around);
 }
 
+// Mosaic
 .mosaic {
   margin: 20px 0;
   padding: 15px;
@@ -63,4 +57,34 @@ body {
       height: auto;
     }
   }
+}
+
+// Modal Edit
+.ME {
+  .modal-dialog {
+    width: 95%;
+  }
+  .modal-tiltle {
+    display: inline-block;
+  }
+  .ME__left {
+    padding: 5%;
+    img {
+      width: 50%;
+      height: auto;
+    }
+  }
+  .ME__right {
+    aside {
+      background-color: $greyAside;
+      min-height: 300px;
+      padding: 10px;
+      @include borderGrey(left);
+    }
+  }
+}
+
+.FE {
+  padding: 10px;
+  @include borderGrey(bottom);
 }

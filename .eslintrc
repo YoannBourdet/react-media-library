@@ -143,7 +143,7 @@
     "react/no-did-mount-set-state": [1, "allow-in-func"],
     "react/no-did-update-set-state": [1, "allow-in-func"],
     "react/no-multi-comp": [1, { ignoreStateless: false }],
-    "react/prop-types": [1, { ignore: ["children"] }],
+    "react/prop-types": [0, { ignore: ["children"] }],
     "react/sort-comp": 1,
     "react/jsx-sort-props": 1,
     "arrow-parens": 1,
